@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")!
         let text = countries[indexPath.row]
         cell.textLabel?.text = text
+        cell.detailTextLabel?.text = friendsHomeArray[indexPath.row]
         return cell
         
     }
@@ -31,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var countries = ["Finland", "Japan", "Germany"]
     
-
+    var friendsHomeArray = ["Helsinki", "Tokyo", "Cologne"]
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
